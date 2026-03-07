@@ -176,4 +176,68 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileBtn.addEventListener('click', () => toggleMenu(true));
     closeBtn.addEventListener('click', () => toggleMenu(false));
     links.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+
+    // --- Testimonial Modal Logic ---
+    const testimonialItems = document.querySelectorAll('.testimonial-item');
+    const testimonialModal = document.getElementById('testimonial-modal');
+
+    if (testimonialItems.length > 0 && testimonialModal) {
+        const modalOverlay = document.getElementById('modal-overlay');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalBtn = document.getElementById('close-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalName = document.getElementById('modal-name');
+        const modalCompany = document.getElementById('modal-company');
+        const modalQuote = document.getElementById('modal-quote');
+
+        const openModal = (item) => {
+            // Populate data
+            modalImg.src = item.dataset.img;
+            modalName.textContent = item.dataset.name;
+            modalCompany.textContent = item.dataset.company;
+            modalQuote.textContent = item.dataset.quote;
+
+            // Show modal
+            testimonialModal.classList.remove('opacity-0', 'pointer-events-none');
+            testimonialModal.classList.add('opacity-100', 'pointer-events-auto');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+        };
+
+        const closeModal = () => {
+            testimonialModal.classList.add('opacity-0', 'pointer-events-none');
+            testimonialModal.classList.remove('opacity-100', 'pointer-events-auto');
+            modalContent.classList.add('scale-95');
+            modalContent.classList.remove('scale-100');
+        };
+
+        testimonialItems.forEach(item => {
+            item.addEventListener('click', () => openModal(item));
+        });
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+    }
+
+    // --- Hash Navigation Offset Fix ---
+    // Make sure we naturally scroll to the right place and account for the fixed navbar 
+    // when coming from a different page like contact.php or portfolio.php
+    window.addEventListener('load', () => {
+        if (window.location.hash) {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                // Determine the fixed navbar height approximate offset
+                const offset = 100;
+
+                // Scroll with offset
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }
+    });
 });

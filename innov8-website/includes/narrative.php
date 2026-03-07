@@ -10,7 +10,7 @@
             Every scroll and click is a deliberate, premium experience. We transform simple portfolios into living,
             breathing demonstrations of technical mastery.
         </p>
-        <a href="#contact"
+        <a href="contact.php"
             class="inline-flex items-center gap-6 px-12 py-6 bg-brand-navy border-2 border-brand-cyan text-brand-cyan font-black uppercase tracking-[0.4em] text-[10px] rounded-full hover:bg-brand-cyan hover:text-brand-navy transition-all duration-500 shadow-2xl opacity-0"
             id="narrative-cta">
             STAY AHEAD OF THE CURVE <i data-lucide="arrow-right" class="w-6 h-6"></i>

@@ -1,6 +1,14 @@
+<?php
+$isHome = strpos($_SERVER['REQUEST_URI'] ?? '', 'index.php') !== false || trim($_SERVER['REQUEST_URI'] ?? '', '/') === '';
+$navItems = [
+    'Portfolio' => 'portfolio.php',
+    'Services' => $isHome ? '#services' : 'index.php#services',
+    'Process' => $isHome ? '#process' : 'index.php#process'
+];
+?>
 <nav id="navbar"
     class="fixed top-4 left-4 right-4 z-50 transition-all duration-500 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-4 flex justify-between items-center max-w-7xl mx-auto shadow-2xl">
-    <a href="./" class="flex items-center">
+    <a href="<?= $isHome ? '#' : './' ?>" class="flex items-center">
         <!-- Desktop Logo -->
         <img src="./public/assets/svg/Innov8_Logo_FullColor.svg" alt="Innov8 Logo"
             class="hidden md:block h-8 w-auto brightness-0 invert">
@@ -11,14 +19,14 @@
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex items-center gap-10">
-        <?php foreach (['Work', 'Services', 'Brand', 'Contact'] as $item): ?>
-            <a href="#<?= strtolower($item) ?>"
+        <?php foreach ($navItems as $item => $href): ?>
+            <a href="<?= $href ?>"
                 class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 hover:text-brand-cyan transition-colors duration-300">
                 <?= $item ?>
             </a>
         <?php endforeach; ?>
 
-        <a href="#contact"
+        <a href="contact.php"
             class="px-8 py-3 bg-white text-brand-navy text-[10px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-brand-cyan hover:text-white transition-all duration-300 transform active:scale-95 shadow-xl">
             Start Project
         </a>
@@ -37,8 +45,8 @@
     <div class="absolute top-10 left-10">
         <img src="./public/assets/svg/Innov8_Logo_Reduced.svg" alt="Innov8 Logo" class="h-8 w-auto brightness-0 invert">
     </div>
-    <?php foreach (['Work', 'Services', 'Brand', 'Contact'] as $item): ?>
-        <a href="#<?= strtolower($item) ?>"
+    <?php foreach ($navItems as $item => $href): ?>
+        <a href="<?= $href ?>"
             class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
             <?= $item ?>
         </a>

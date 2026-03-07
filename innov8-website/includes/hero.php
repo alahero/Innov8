@@ -23,15 +23,15 @@
                 We are a high-end digital agency that transforms bold concepts into result-driven cinematic experiences
                 that move with liquid fluidity and technical mastery.
 
-            <!-- CTAs -->
+                <!-- CTAs -->
             <div id="hero-ctas" class="flex flex-col md:flex-row items-center justify-center gap-8 opacity-0">
-                <a href="#work"
+                <a href="contact.php"
                     class="group relative px-12 py-6 bg-brand-cyan text-brand-navy font-black uppercase tracking-[0.2em] rounded-full overflow-hidden transition-all duration-300 transform active:scale-95 shadow-xl shadow-brand-cyan/20 text-[10px]">
-                    View Our Work
+                    Start a Project
                 </a>
-                <a href="#services"
+                <a href="portfolio.php"
                     class="flex items-center gap-4 text-white uppercase tracking-[0.3em] text-[10px] font-black group transition-all duration-300">
-                    OUR PROCESS <i data-lucide="arrow-right"
+                    VIEW OUR WORK <i data-lucide="arrow-right"
                         class="w-4 h-4 text-brand-cyan group-hover:translate-x-2 transition-transform duration-300"></i>
                 </a>
             </div>

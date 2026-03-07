@@ -64,7 +64,7 @@
         </div>
 
         <!-- Process Header -->
-        <div class="max-w-4xl mb-12 md:mb-24" data-animate="slide-up">
+        <div id="process" class="max-w-4xl mb-12 md:mb-24 scroll-mt-32" data-animate="slide-up">
             <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-brand-red mb-4">OUR PROCESS</h2>
             <h3 class="text-4xl md:text-8xl font-black uppercase tracking-tighter mb-4 md:mb-8 leading-[0.9]">HOW WE
                 <br /><span class="italic text-brand-red">INNOV8</span>
@@ -98,6 +98,91 @@
                     <p class="text-sm md:text-lg text-white/50 leading-relaxed font-medium italic">
                         <?= $step['desc'] ?>
                     </p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <!-- Packages Header -->
+        <div class="max-w-4xl mt-24 mb-12 md:mb-24" data-animate="slide-up">
+            <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-brand-cyan mb-4">OUR STRATEGIC PACKAGES
+            </h2>
+            <h3 class="text-4xl md:text-8xl font-black uppercase tracking-tighter mb-4 md:mb-8 leading-[0.9]">TAILORED
+                <br /><span class="italic text-brand-cyan">SOLUTIONS</span>
+            </h3>
+            <p class="text-lg md:text-xl text-white/50 font-medium leading-relaxed">
+                Comprehensive creative packages designed to meet brands at every critical stage of growth.
+            </p>
+        </div>
+
+        <!-- Packages Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10 pb-12">
+            <?php
+            $packages = [
+                [
+                    'name' => 'Starting To Innov8',
+                    'desc' => 'A foundational package for brands beginning to define or refresh their identity.',
+                    'features' => [
+                        'Logo',
+                        'Business Cards (500 pieces)',
+                        'Google Business Profile'
+                    ],
+                    'accent' => 'text-white'
+                ],
+                [
+                    'name' => 'Innov8 & Growth',
+                    'desc' => 'Designed for businesses ready to scale their brand and strengthen market presence.',
+                    'features' => [
+                        'Starting To Innov8 Included',
+                        'Web + Hosting (1 Year)',
+                        'Email Signature'
+                    ],
+                    'accent' => 'text-brand-cyan'
+                ],
+                [
+                    'name' => 'Innov8 Pro',
+                    'desc' => 'A comprehensive solution for brands seeking a fully integrated creative partner.',
+                    'features' => [
+                        'Innov8 & Growth Included',
+                        'Letterhead Pack (250 pieces)',
+                        'Digital Invoice Design',
+                        'Social Media Premium Creative Pack',
+                        'QR Code'
+                    ],
+                    'accent' => 'text-brand-red'
+                ]
+            ];
+
+            foreach ($packages as $pkg):
+                ?>
+                <div class="flex flex-col p-8 glass rounded-3xl border-white/5 hover:border-white/20 hover:bg-white-[0.02] transition-all duration-500"
+                    data-animate="card">
+
+                    <!-- Package Header -->
+                    <div class="mb-8">
+                        <h4 class="text-2xl font-black uppercase tracking-wider text-white mb-3 <?= $pkg['accent'] ?>">
+                            <?= $pkg['name'] ?></h4>
+                        <p class="text-sm text-white/50 leading-relaxed font-medium min-h-[40px]"><?= $pkg['desc'] ?></p>
+                    </div>
+
+                    <!-- Learn More CTA -->
+                    <a href="contact.php"
+                        class="w-full mb-8 inline-flex items-center justify-center gap-2 px-6 py-4 bg-brand-cyan/10 text-brand-cyan hover:bg-brand-cyan hover:text-brand-navy rounded-full text-xs font-black uppercase tracking-[0.2em] transition-all duration-300">
+                        LEARN MORE
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+
+                    <!-- Features List -->
+                    <div class="flex-grow">
+                        <ul class="space-y-4">
+                            <?php foreach ($pkg['features'] as $feature): ?>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 flex-shrink-0 text-brand-cyan">
+                                        <i data-lucide="check" class="w-4 h-4"></i>
+                                    </div>
+                                    <span class="text-sm text-white/80 font-medium"><?= $feature ?></span>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>

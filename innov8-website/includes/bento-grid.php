@@ -1,4 +1,4 @@
-<section id="work" class="py-32 px-8 overflow-hidden">
+<section id="portfolio" class="py-32 px-8 overflow-hidden">
     <div class="container mx-auto max-w-7xl">
 
         <!-- Section Header -->
@@ -8,7 +8,7 @@
                 </h2>
                 <h3 class="text-5xl md:text-8xl font-black uppercase tracking-tighter">THE PORTFOLIO</h3>
             </div>
-            <a href="#work"
+            <a href="portfolio.php"
                 class="hidden md:flex items-center gap-4 text-white/30 hover:text-brand-cyan transition-all duration-300 text-[10px] uppercase tracking-[0.3em] group">
                 VIEW FULL ARCHIVE <i data-lucide="arrow-up-right"
                     class="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>

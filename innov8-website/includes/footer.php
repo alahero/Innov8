@@ -8,9 +8,9 @@
                     class="text-[14vw] lg:text-[10vw] font-black tracking-tighter uppercase leading-[0.75] mb-16 text-white group cursor-default">
                     Let's <br /> <span class="text-brand-cyan hover:italic transition-all duration-700">Talk</span>
                 </h2>
-                <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-6 md:gap-8">
                     <a href="mailto:hello@innov8.creations"
-                        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white hover:text-brand-red transition-colors duration-500 uppercase tracking-tighter block truncate sm:whitespace-normal">hello@innov8.creations</a>
+                        class="text-lg sm:text-xl md:text-3xl lg:text-4xl font-black text-white hover:text-brand-red transition-colors duration-500 uppercase tracking-tighter block break-all">hello@innov8.creations</a>
                     <a href="tel:+14157966262"
                         class="text-xl text-white/40 hover:text-white transition-colors duration-500 uppercase tracking-[0.4em] font-black">+1
                         (415) 796-6262</a>
