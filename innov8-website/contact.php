@@ -1,29 +1,5 @@
-<?php
-// Active page to help with navigation logic if needed
-$isHome = false;
-?>
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Innov8 Creations</title>
-
-    <!-- Meta Description -->
-    <meta name="description"
-        content="Let's start a Project. Tell us about your project and we’ll get back to you to discuss your needs and explore how we can work together.">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./public/main.css">
-</head>
+<?php $isHome = false;
+include './includes/head-contact.php'; ?>
 
 <body class="bg-brand-dark overflow-x-hidden md:overflow-y-auto pt-24">
 
@@ -45,13 +21,13 @@ $isHome = false;
                 <!-- Left Content: Header & Info -->
                 <div class="space-y-8" data-animate="slide-up">
                     <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9]">
-                        Let's start a <br />
-                        <span class="text-brand-cyan italic dropdown-text">Project</span>
+                        Ready to Lead <br />
+                        <span class="text-brand-cyan italic dropdown-text">Your Market?</span>
                     </h1>
 
                     <p class="text-lg md:text-2xl text-white/60 font-medium leading-relaxed max-w-xl">
-                        Tell us about your project and we'll get back to you to discuss your needs and explore how we
-                        can work together.
+                        Tell us your goals. We'll map a strategy, define the deliverables, and engineer the brand
+                        presence your business deserves.
                     </p>
 
                     <div class="pt-8 space-y-6 md:space-y-0 md:flex md:gap-12 border-t border-white/10">

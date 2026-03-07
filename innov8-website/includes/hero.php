@@ -13,21 +13,21 @@
             <h1 id="hero-headline"
                 class="text-[12vw] md:text-[10vw] font-black leading-[0.8] tracking-tighter uppercase mb-12">
                 <span class="block text-gradient">Crafting</span>
-                <span class="block italic text-brand-cyan -mt-2">Cinematic</span>
+                <span class="block italic text-brand-cyan -mt-2">Innov8</span>
                 <span class="block -mt-2">Dominance</span>
             </h1>
 
             <!-- Subheading -->
             <p id="hero-subtext"
                 class="max-w-2xl mx-auto text-lg md:text-xl text-white/50 font-medium leading-relaxed mb-16 opacity-0">
-                We are a high-end digital agency that transforms bold concepts into result-driven cinematic experiences
-                that move with liquid fluidity and technical mastery.
+                We are a high-performance digital agency that engineers bold brand identities into result-driven
+                experiences — built for businesses across all 50 states.
 
                 <!-- CTAs -->
             <div id="hero-ctas" class="flex flex-col md:flex-row items-center justify-center gap-8 opacity-0">
                 <a href="contact.php"
                     class="group relative px-12 py-6 bg-brand-cyan text-brand-navy font-black uppercase tracking-[0.2em] rounded-full overflow-hidden transition-all duration-300 transform active:scale-95 shadow-xl shadow-brand-cyan/20 text-[10px]">
-                    Start a Project
+                    Grow My Brand
                 </a>
                 <a href="portfolio.php"
                     class="flex items-center gap-4 text-white uppercase tracking-[0.3em] text-[10px] font-black group transition-all duration-300">

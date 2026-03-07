@@ -1,30 +1,6 @@
-<?php
-// Active page to help with navigation logic if needed
-$isHome = false;
-?>
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<?php $isHome = false; include './includes/head-portfolio.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Portfolio | Innov8 Creations</title>
-
-    <!-- Meta Description -->
-    <meta name="description"
-        content="Explore our portfolio of curated, cinematic digital experiences. We take pride in our adventurous and bold approach to design and strategy.">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./public/main.css">
-
-    <style>
+<style>
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -52,16 +28,35 @@ $isHome = false;
         }
 
         #project-modal.open .modal-inner {
-            transform: translateY(0) scale(1);
+            transform: scale(1);
             opacity: 1;
         }
 
         #project-modal:not(.open) .modal-inner {
-            transform: translateY(30px) scale(0.98);
+            transform: scale(0.96);
             opacity: 0;
         }
 
-        /* Bento grid aspect ratios */
+        /* Bento grid cells — always fill their container without stretching */
+        .bento-cell {
+            overflow: hidden;
+            border-radius: 1rem;
+            background: var(--color-brand-surface);
+        }
+
+        .bento-cell img,
+        .bento-cell video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Aspect ratio helpers */
+        .bento-cover {
+            aspect-ratio: 16/9;
+        }
+
         .bento-wide {
             aspect-ratio: 16/9;
         }
@@ -76,10 +71,6 @@ $isHome = false;
 
         .bento-tall {
             aspect-ratio: 4/5;
-        }
-
-        video {
-            object-fit: cover;
         }
     </style>
 </head>
@@ -297,7 +288,8 @@ $isHome = false;
     </main>
 
     <!-- Project Detail Modal -->
-    <div id="project-modal" class="fixed inset-0 z-[200] pointer-events-none" aria-hidden="true">
+    <div id="project-modal" class="fixed inset-0 z-[200] pointer-events-none flex items-center justify-center p-4"
+        aria-hidden="true">
         <!-- Backdrop -->
         <div id="modal-backdrop"
             class="absolute inset-0 bg-brand-dark/95 backdrop-blur-xl opacity-0 transition-opacity duration-300 cursor-pointer"
@@ -305,7 +297,7 @@ $isHome = false;
 
         <!-- Modal Panel -->
         <div
-            class="modal-inner absolute inset-y-0 right-0 w-full lg:w-[70%] bg-brand-dark border-l border-white/5 overflow-y-auto shadow-2xl flex flex-col">
+            class="modal-inner relative w-[92vw] max-h-[90vh] my-auto mx-auto bg-brand-dark rounded-3xl border border-white/10 overflow-y-auto shadow-2xl flex flex-col">
 
             <!-- Modal Header -->
             <div
@@ -322,17 +314,13 @@ $isHome = false;
                 </button>
             </div>
 
-            <!-- Cover Media -->
-            <div id="modal-cover" class="w-full relative overflow-hidden" style="max-height: 60vh;">
-            </div>
-
             <!-- Project Description -->
             <div class="px-8 py-10">
                 <p id="modal-desc" class="text-lg text-white/60 font-medium leading-relaxed max-w-xl"></p>
             </div>
 
-            <!-- Bento Content Grid -->
-            <div id="modal-bento" class="px-8 pb-16 grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-auto">
+            <!-- Bento Content Grid (cover is first item, injected by JS) -->
+            <div id="modal-bento" class="px-8 pb-16 grid grid-cols-2 md:grid-cols-3 gap-4">
             </div>
         </div>
     </div>
@@ -404,33 +392,40 @@ $isHome = false;
             document.getElementById('modal-service').textContent = project.service;
             document.getElementById('modal-desc').textContent = project.desc;
 
-            // Cover
-            const coverEl = document.getElementById('modal-cover');
-            if (project.type === 'video') {
-                coverEl.innerHTML = `<video src="${project.cover}" autoplay muted loop playsinline class="w-full h-full object-cover" style="max-height:60vh;"></video>`;
-            } else {
-                coverEl.innerHTML = `<img src="${project.cover}" alt="${project.title}" class="w-full object-cover" style="max-height:60vh;">`;
-            }
-
-            // Bento content grid
             const bento = document.getElementById('modal-bento');
             bento.innerHTML = '';
+
+            // --- 1. Cover as first full-width item ---
+            const coverDiv = document.createElement('div');
+            coverDiv.className = 'bento-cell bento-cover col-span-2 md:col-span-3';
+            if (project.type === 'video') {
+                coverDiv.innerHTML = `<video src="${project.cover}" autoplay muted loop playsinline></video>`;
+            } else {
+                coverDiv.innerHTML = `<img src="${project.cover}" alt="${project.title} cover">`;
+            }
+            bento.appendChild(coverDiv);
+
+            // --- 2. Content items ---
             if (project.content && project.content.length > 0) {
                 project.content.forEach((item, index) => {
                     const div = document.createElement('div');
-                    // Alternate some items to span 2 columns for visual dynamism
-                    const spanTwo = (index === 0 || (index % 4 === 0 && index !== 0));
-                    div.className = `overflow-hidden rounded-2xl bg-brand-surface ${spanTwo ? 'col-span-2' : 'col-span-1'} ${item.size}`;
+                    // Portrait items (9:16) should NEVER span 2 cols — they're already tall
+                    // Wide/square items get alternating col-span-2 for rhythm
+                    const isPortrait = item.size === 'bento-portrait';
+                    const spanTwo = !isPortrait && (index === 0 || index % 3 === 0);
+                    div.className = `bento-cell ${item.size} ${spanTwo ? 'col-span-2' : 'col-span-1'}`;
                     if (item.type === 'video') {
-                        div.innerHTML = `<video src="${item.src}" autoplay muted loop playsinline class="w-full h-full object-cover"></video>`;
+                        div.innerHTML = `<video src="${item.src}" autoplay muted loop playsinline></video>`;
                     } else {
-                        div.innerHTML = `<img src="${item.src}" alt="Project image ${index + 2}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">`;
+                        div.innerHTML = `<img src="${item.src}" alt="Project content ${index + 2}">`;
                     }
                     bento.appendChild(div);
                 });
             }
 
-            // Show modal
+            // Show modal — always scroll back to top
+            const modalInner = document.querySelector('#project-modal .modal-inner');
+            if (modalInner) modalInner.scrollTop = 0;
             modal.style.pointerEvents = 'auto';
             modal.setAttribute('aria-hidden', 'false');
             backdrop.style.opacity = '1';

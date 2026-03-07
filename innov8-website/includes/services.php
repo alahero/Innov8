@@ -18,11 +18,11 @@
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-32 max-h-[460px] md:max-h-none overflow-hidden transition-all duration-700 ease-in-out relative">
                 <?php
                 $services = [
-                    ['icon' => 'brush', 'title' => 'LOGO & BRANDING', 'desc' => 'Visual identities that command attention.'],
+                    ['icon' => 'brush', 'title' => 'LOGO & BRANDING', 'desc' => 'High-performance brand identities engineered to lead markets.'],
                     ['icon' => 'briefcase', 'title' => 'CORPORATE STATIONERY', 'desc' => 'Tangible brand presence with surgical precision.'],
-                    ['icon' => 'monitor', 'title' => 'WEBSITE', 'desc' => 'High-end digital experiences with liquid fluidity.'],
+                    ['icon' => 'monitor', 'title' => 'WEBSITE', 'desc' => 'Conversion-optimized digital experiences with cinematic precision.'],
                     ['icon' => 'share-2', 'title' => 'SOCIAL MEDIA', 'desc' => 'Strategic narratives for global digital impact.'],
-                    ['icon' => 'megaphone', 'title' => 'PROMOTIONAL MATERIALS', 'desc' => 'Communication that drives result-oriented action.'],
+                    ['icon' => 'megaphone', 'title' => 'PROMOTIONAL MATERIALS', 'desc' => 'Campaigns that generate measurable leads and response.'],
                     ['icon' => 'cpu', 'title' => 'DIGITAL TOOLS', 'desc' => 'Technical mastery in custom digital solutions.'],
                     ['icon' => 'book-open', 'title' => 'EDITORIAL DESIGN', 'desc' => 'Cinematic storytelling through premium layout.'],
                 ];
@@ -80,9 +80,9 @@
 
             <?php
             $steps = [
-                ['title' => 'Contact', 'desc' => 'We start by learning about your project through a contact form or a call, allowing us to understand your needs, goals, and expectations.'],
-                ['title' => 'Analysis & Proposal', 'desc' => 'We evaluate your objectives and prepare a clear proposal outlining the scope, approach, and next steps for the development of your project.'],
-                ['title' => 'Delivery & Follow-Up', 'desc' => 'We develop the project, apply the necessary adjustments, and provide continued support after delivery to ensure everything works as expected.'],
+                ['title' => 'Contact', 'desc' => 'We begin with a direct discovery session — learning your goals, market position, and what success looks like for your brand.'],
+                ['title' => 'Analysis & Proposal', 'desc' => 'We analyze your competitive landscape and deliver a strategic roadmap — scope, approach, and measurable milestones.'],
+                ['title' => 'Delivery & Follow-Up', 'desc' => 'We launch your brand asset, refine based on real-world performance, and stay in your corner as a long-term strategic partner.'],
             ];
             foreach ($steps as $i => $step):
                 ?>
@@ -109,7 +109,8 @@
                 <br /><span class="italic text-brand-cyan">SOLUTIONS</span>
             </h3>
             <p class="text-lg md:text-xl text-white/50 font-medium leading-relaxed">
-                Comprehensive creative packages designed to meet brands at every critical stage of growth.
+                Structured pathways engineered for businesses across all 50 states — from first identity to full market
+                presence.
             </p>
         </div>
 
@@ -159,14 +160,15 @@
                     <!-- Package Header -->
                     <div class="mb-8">
                         <h4 class="text-2xl font-black uppercase tracking-wider text-white mb-3 <?= $pkg['accent'] ?>">
-                            <?= $pkg['name'] ?></h4>
+                            <?= $pkg['name'] ?>
+                        </h4>
                         <p class="text-sm text-white/50 leading-relaxed font-medium min-h-[40px]"><?= $pkg['desc'] ?></p>
                     </div>
 
                     <!-- Learn More CTA -->
                     <a href="contact.php"
                         class="w-full mb-8 inline-flex items-center justify-center gap-2 px-6 py-4 bg-brand-cyan/10 text-brand-cyan hover:bg-brand-cyan hover:text-brand-navy rounded-full text-xs font-black uppercase tracking-[0.2em] transition-all duration-300">
-                        LEARN MORE
+                        GET STARTED
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
 
