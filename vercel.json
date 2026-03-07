@@ -1,9 +1,10 @@
 {
-    "functions": {
-        "innov8-website/**/*.php": {
-            "runtime": "vercel-php@0.6.2"
+    "builds": [
+        {
+            "src": "innov8-website/**/*.php",
+            "use": "vercel-php@0.6.2"
         }
-    },
+    ],
     "rewrites": [
         {
             "source": "/",
