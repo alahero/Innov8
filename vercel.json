@@ -1,0 +1,17 @@
+{
+    "functions": {
+        "innov8-website/**/*.php": {
+            "runtime": "vercel-php@0.6.2"
+        }
+    },
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/innov8-website/index.php"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/innov8-website/$1"
+        }
+    ]
+}
