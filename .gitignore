@@ -4,3 +4,7 @@ node_modules/
 dist/
 build/
 *.log
+innov8-website/composer.phar
+innov8-website/vendor/
+innov8-website/.env
+innov8-website/layouts/emails/

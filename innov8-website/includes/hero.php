@@ -1,6 +1,6 @@
 <section id="hero"
     class="relative min-h-[110vh] flex items-center justify-center p-8 md:p-12 overflow-hidden liquid-gradient">
-    <div class="container mx-auto max-w-7xl relative z-20 pt-32">
+    <div class="container mx-auto max-w-7xl relative z-20 pt-12 pt-md-32">
         <div id="hero-content" class="text-center">
 
             <!-- Badge -->

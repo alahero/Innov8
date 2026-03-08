@@ -23,10 +23,10 @@
                     <?php
                     $navLinks = [
                         'Home' => './',
-                        'Portfolio' => './portfolio.php',
-                        'Services' => './index.php#services',
-                        'Process' => './index.php#process',
-                        'Contact' => './contact.php',
+                        'Portfolio' => './portfolio',
+                        'Services' => './index#services',
+                        'Process' => './index#process',
+                        'Contact' => './contact',
                     ];
                     foreach ($navLinks as $label => $href): ?>
                         <a href="<?= $href ?>"
