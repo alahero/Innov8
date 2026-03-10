@@ -86,6 +86,59 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./public/main.css">
+
+    <style>
+        /* Project Modal */
+        #project-modal .modal-inner {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+        }
+
+        #project-modal.open .modal-inner {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        #project-modal:not(.open) .modal-inner {
+            transform: scale(0.96);
+            opacity: 0;
+        }
+
+        /* Bento grid cells — always fill their container without stretching */
+        .bento-cell {
+            overflow: hidden;
+            border-radius: 1rem;
+            background: var(--color-brand-surface);
+        }
+
+        .bento-cell img,
+        .bento-cell video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Aspect ratio helpers */
+        .bento-cover {
+            aspect-ratio: 16/9;
+        }
+
+        .bento-wide {
+            aspect-ratio: 16/9;
+        }
+
+        .bento-square {
+            aspect-ratio: 1/1;
+        }
+
+        .bento-portrait {
+            aspect-ratio: 9/16;
+        }
+
+        .bento-tall {
+            aspect-ratio: 4/5;
+        }
+    </style>
 </head>
 
 <body class="bg-brand-dark overflow-x-hidden md:overflow-y-auto">
@@ -95,7 +148,10 @@
     <main>
         <?php include './includes/hero.php'; ?>
         <?php include './includes/client-marquee.php'; ?>
+
         <?php include './includes/bento-grid.php'; ?>
+        <?php include './includes/project-modal.php'; ?>
+
         <?php include './includes/services.php'; ?>
         <?php include './includes/narrative.php'; ?>
     </main>
@@ -108,6 +164,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lucide@0.477.0/dist/umd/lucide.js"></script>
     <script src="./assets/js/main.js"></script>
+
+    <script src="./assets/js/project-modal.js"></script>
 </body>
 
 </html>
