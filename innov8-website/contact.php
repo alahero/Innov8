@@ -55,7 +55,7 @@ include './includes/head-contact.php'; ?>
                 <div class="glass border-white/5 rounded-[2rem] p-8 md:p-12 relative shadow-2xl" data-animate="slide-up"
                     style="transition-delay: 200ms;">
 
-                    <form action="#" method="POST" class="space-y-8">
+                    <form id="contact-form" method="POST" class="space-y-8">
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -64,7 +64,7 @@ include './includes/head-contact.php'; ?>
                                 <label for="fullName"
                                     class="block text-[10px] font-bold uppercase tracking-widest text-brand-cyan">Full
                                     Name</label>
-                                <input type="text" id="fullName" name="fullName" required
+                                <input type="text" id="fullName" name="name" required
                                     class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-sm placeholder-white/30 focus:outline-none focus:border-brand-cyan focus:bg-white/10 transition-all font-inter"
                                     placeholder="Jane Doe">
                             </div>
@@ -162,7 +162,7 @@ include './includes/head-contact.php'; ?>
                         <div
                             class="pt-6 border-t border-white/10 flex flex-col md:flex-row items-center gap-6 justify-between">
 
-                            <button type="submit"
+                            <button type="submit" aria-label="Send Message to Innov8 Creations"
                                 class="w-full md:w-auto px-10 py-4 bg-brand-cyan text-brand-navy font-black flex items-center justify-center gap-4 uppercase tracking-[0.2em] rounded-full hover:bg-white hover:text-brand-navy transition-all duration-300 transform active:scale-95 shadow-xl group order-1 md:order-2 shrink-0 text-[10px]">
                                 Send Message
                                 <i data-lucide="send"
@@ -186,6 +186,9 @@ include './includes/head-contact.php'; ?>
         </div>
     </main>
 
+    <!-- Whatsapp button -->
+    <?php include  './includes/whatsapp-button.php'; ?>
+
     <!-- Footer -->
     <?php include './includes/footer.php'; ?>
 
@@ -194,6 +197,10 @@ include './includes/head-contact.php'; ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lucide@0.477.0/dist/umd/lucide.js"></script>
     <script src="./assets/js/main.js"></script>
+
+    <script src="./plugins/jquery/jquery.js"></script>
+    <script src="./plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="./assets/js/contact-form.js"></script>
 </body>
 
 </html>

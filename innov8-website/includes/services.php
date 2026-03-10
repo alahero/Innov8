@@ -56,7 +56,7 @@
             </div>
 
             <!-- Show All Button -->
-            <button id="show-all-services"
+            <button id="show-all-services" aria-label="Show all services offered by Innov8 Creations"
                 class="md:hidden absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 text-brand-cyan font-black uppercase tracking-[0.3em] text-[10px] group transition-all duration-300 hover:scale-105 active:scale-95">
                 SHOW ALL <i data-lucide="chevron-down"
                     class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>

@@ -100,6 +100,7 @@
         <?php include './includes/narrative.php'; ?>
     </main>
 
+    <?php include  './includes/whatsapp-button.php'; ?>
     <?php include './includes/footer.php'; ?>
 
     <!-- Scripts -->

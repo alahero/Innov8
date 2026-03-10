@@ -2,7 +2,7 @@
     <div class="container mx-auto max-w-7xl">
 
         <!-- Section Header -->
-        <div class="flex justify-between items-end mb-20">
+        <div class="flex justify-between items-end mb-6 md:mb-20">
             <div data-animate="slide-up">
                 <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-brand-cyan mb-4">SELECTED NARRATIVES
                 </h2>
@@ -10,6 +10,14 @@
             </div>
             <a href="portfolio.php"
                 class="hidden md:flex items-center gap-4 text-white/30 hover:text-brand-cyan transition-all duration-300 text-[10px] uppercase tracking-[0.3em] group">
+                VIEW FULL ARCHIVE <i data-lucide="arrow-up-right"
+                    class="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+            </a>
+        </div>
+
+        <div class="flex justify-between items-end mb-20">
+            <a href="portfolio.php"
+                class="flex md:hidden items-center gap-4 text-white/30 hover:text-brand-cyan transition-all duration-300 text-[10px] uppercase tracking-[0.3em] group">
                 VIEW FULL ARCHIVE <i data-lucide="arrow-up-right"
                     class="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
             </a>

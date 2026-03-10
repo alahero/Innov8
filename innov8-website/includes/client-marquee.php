@@ -53,7 +53,7 @@
         <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-md cursor-pointer" id="modal-overlay"></div>
         <div class="relative w-full max-w-2xl mx-4 p-8 md:p-12 glass rounded-3xl border border-white/10 shadow-2xl transform scale-95 transition-transform duration-300"
             id="modal-content">
-            <button id="close-modal"
+            <button id="close-modal" aria-label="Close Testimonial Modal"
                 class="absolute top-6 right-6 text-white/50 hover:text-brand-cyan transition-colors">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>

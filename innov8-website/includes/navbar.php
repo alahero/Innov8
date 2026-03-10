@@ -1,9 +1,9 @@
 <?php
-$isHome = strpos($_SERVER['REQUEST_URI'] ?? '', 'index.php') !== false || trim($_SERVER['REQUEST_URI'] ?? '', '/') === '';
+$isHome = strpos($_SERVER['REQUEST_URI'] ?? '', 'index') !== false || trim($_SERVER['REQUEST_URI'] ?? '', '/') === '';
 $navItems = [
-    'Portfolio' => 'portfolio.php',
-    'Services' => $isHome ? '#services' : 'index.php#services',
-    'Process' => $isHome ? '#process' : 'index.php#process'
+    'Portfolio' => 'portfolio',
+    'Services' => $isHome ? '#services' : 'index#services',
+    'Process' => $isHome ? '#process' : 'index#process'
 ];
 ?>
 <nav id="navbar"
@@ -33,7 +33,7 @@ $navItems = [
     </div>
 
     <!-- Mobile Button -->
-    <button id="mobile-menu-btn" class="md:hidden text-white hover:text-brand-cyan transition-colors">
+    <button aria-label="Open Mobile Menu" id="mobile-menu-btn" class="md:hidden text-white hover:text-brand-cyan transition-colors">
         <i data-lucide="menu" class="w-6 h-6"></i>
     </button>
 </nav>
@@ -51,7 +51,25 @@ $navItems = [
             <?= $item ?>
         </a>
     <?php endforeach; ?>
-    <button id="close-menu-btn" class="absolute top-8 right-8 text-white p-2">
+    <div class="flex gap-6">
+        <a href="https://instagram.com/innov8creations" target="_blank" rel="noopener noreferrer"
+            class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
+            <i data-lucide="instagram" class="w-8 h-8"></i>
+        </a>
+        <a href="https://dribbble.com/innov8creations" target="_blank" rel="noopener noreferrer"
+            class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
+            <i data-lucide="dribbble" class="w-8 h-8"></i>
+        </a>
+        <a href="https://linkedin.com/company/innov8creations" target="_blank" rel="noopener noreferrer"
+            class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
+            <i data-lucide="linkedin" class="w-8 h-8"></i>
+        </a>
+        <a href="https://x.com/innov8creations" target="_blank" rel="noopener noreferrer"
+            class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
+            <i data-lucide="twitter" class="w-8 h-8"></i>
+        </a>
+    </div>
+    <button aria-label="Close Mobile Menu" id="close-menu-btn" class="absolute top-8 right-8 text-white p-2">
         <i data-lucide="x" class="w-10 h-10"></i>
     </button>
 </div>

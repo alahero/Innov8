@@ -121,7 +121,7 @@
                     ];
                     $isFirst = true;
                     foreach ($filters as $label => $value): ?>
-                        <button
+                        <button aria-label="Filter projects by <?= $label ?>"
                             class="filter-btn shrink-0 px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 border <?= $isFirst ? 'bg-brand-cyan border-brand-cyan text-brand-navy' : 'bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-white/30' ?>"
                             data-filter="<?= $value ?>">
                             <?= $label ?>
@@ -308,7 +308,7 @@
                     <h2 id="modal-title"
                         class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white leading-none"></h2>
                 </div>
-                <button onclick="closeProjectModal()"
+                <button onclick="closeProjectModal()" aria-label="Close Project Details"
                     class="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white/60 hover:text-brand-cyan transition-all duration-300">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
@@ -324,6 +324,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Whatsapp button -->
+    <?php include  './includes/whatsapp-button.php'; ?>
 
     <!-- Footer -->
     <?php include './includes/footer.php'; ?>

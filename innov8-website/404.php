@@ -13,6 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./public/main.css">
+
+    <?php http_response_code(404); ?>
 </head>
 
 <body
