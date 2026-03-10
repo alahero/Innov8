@@ -1,9 +1,9 @@
 <?php
 $isHome = strpos($_SERVER['REQUEST_URI'] ?? '', 'index') !== false || trim($_SERVER['REQUEST_URI'] ?? '', '/') === '';
 $navItems = [
-    'Portfolio' => 'portfolio',
-    'Services' => $isHome ? '#services' : 'index#services',
-    'Process' => $isHome ? '#process' : 'index#process'
+    'Portfolio' => 'portfolio.php',
+    'Services' => $isHome ? '#services' : 'index.php#services',
+    'Process' => $isHome ? '#process' : 'index.php#process'
 ];
 ?>
 <nav id="navbar"

@@ -28,10 +28,60 @@
 
             <?php
                 $projects = [
-                    ['id' => 'p1', 'title' => 'NEXUS PROMO', 'service' => 'Promotional Materials', 'desc' => 'Global event campaign.', 'cover' => 'https://picsum.photos/seed/nexus/800/800'],
-                    ['id' => 'p2', 'title' => 'STRIPE CONNECT', 'service' => 'Website', 'desc' => 'B2B dashboard redesign.', 'cover' => 'https://picsum.photos/seed/stripe2/800/800'],
-                    ['id' => 'p3', 'title' => 'SNAPCHAT KIT', 'service' => 'Corporate Stationery', 'desc' => 'Full stationery kit.', 'cover' => 'https://picsum.photos/seed/mobile/800/800'],
-                    ['id' => 'p4', 'title' => 'VANTARA XP', 'service' => 'Digital Tools', 'desc' => '3D Immersive web experience.', 'cover' => 'https://picsum.photos/seed/nature/800/800'],
+                    [
+                        'id'      => 'roofix',
+                        'title'   => 'ROOFIX',
+                        'service' => 'Website',
+                        'desc'    => 'A high-converting roofing website built for dominance — bold design, seamless UX, and lead-generation power baked in.',
+                        'cover'   => './public/portfolio/website/roofix/RooFix_Cover.webp',
+                        'type'    => 'image',
+                        'content' => [
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_02.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_03.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_04.webp', 'type' => 'image', 'size' => 'bento-square'],
+                        ],
+                    ],
+                    [
+                        'id'      => 'top-repair',
+                        'title'   => 'TOP REPAIR',
+                        'service' => 'Logo & Branding',
+                        'desc'    => 'A sharp, professional identity for Top Repair — built to command trust and communicate quality at first glance.',
+                        'cover'   => './public/portfolio/logo-branding/top-repair/TopRepair_Cover.webp',
+                        'type'    => 'image',
+                        'content' => [
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_02.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_03.webp', 'type' => 'image', 'size' => 'bento-square'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_04.webp', 'type' => 'image', 'size' => 'bento-square'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_05.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                        ],
+                    ],
+                    [
+                        'id' => 'la-santa',
+                        'title' => 'LA SANTA ANIVERSARIO',
+                        'service' => 'Social Media',
+                        'desc' => 'A cinematic anniversary campaign for La Santa — motion-forward storytelling at its finest.',
+                        'cover' => './public/portfolio/social-media/la-santa/La_Santa_Aniversario_Cover.mp4',
+                        'type' => 'video',
+                        'content' => [
+                            ['src' => './public/portfolio/social-media/la-santa/La_Santa_Aniversario_Content_02.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
+                            ['src' => './public/portfolio/social-media/la-santa/La_Santa_Aniversario_Content_03.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
+                            ['src' => './public/portfolio/social-media/la-santa/La_Santa_Aniversario_Content_04.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
+                        ]
+                    ],
+                    [
+                        'id' => 'mandala',
+                        'title' => 'MANDALA TEASER',
+                        'service' => 'Social Media',
+                        'desc' => 'An evocative teaser campaign for Mandala — where ancient symbolism meets modern motion design.',
+                        'cover' => './public/portfolio/social-media/mandala/Mandala_Teaser_Cover.mp4',
+                        'type' => 'video',
+                        'content' => [
+                            ['src' => './public/portfolio/social-media/mandala/Mandala_Teaser_Content_02.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
+                            ['src' => './public/portfolio/social-media/mandala/Mandala_Teaser_Content_03.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
+                            ['src' => './public/portfolio/social-media/mandala/Mandala_Teaser_Content_04.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
+                            ['src' => './public/portfolio/social-media/mandala/Mandala_Teaser_Content_05.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
+                        ]
+                    ],
                 ];
             ?>
 
@@ -39,9 +89,14 @@
             <div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-[3rem] bg-brand-surface shadow-2xl cursor-pointer"
                 data-animate="card" data-service="<?= $projects[0]['service'] ?>" data-project-id="<?= $projects[0]['id'] ?>"
                         onclick="openProjectModal(<?= htmlspecialchars(json_encode($projects[0]), ENT_QUOTES, 'UTF-8') ?>)">
-                <img src="<?= $projects[0]['cover'] ?>"
-                    alt="<?= $projects[0]['desc'] ?>" loading="lazy"
-                    class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out">
+                <?php if ($projects[0]['type'] === 'video'): ?>
+                    <video src="<?= $projects[0]['cover'] ?>" autoplay muted loop playsinline
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out pointer-events-none"></video>
+                <?php else: ?>
+                    <img src="<?= $projects[0]['cover'] ?>"
+                        alt="<?= $projects[0]['desc'] ?>" loading="lazy"
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out">
+                <?php endif; ?>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute bottom-12 left-12">
                     <p class="text-[10px] font-black uppercase tracking-[0.4em] text-brand-cyan mb-4"><?= $projects[0]['service'] ?>
@@ -55,9 +110,14 @@
             <div class="md:col-span-2 md:row-span-1 group relative overflow-hidden rounded-[3rem] bg-brand-surface cursor-pointer"
                 data-animate="card" data-service="<?= $projects[1]['service'] ?>" data-project-id="<?= $projects[1]['id'] ?>"
                         onclick="openProjectModal(<?= htmlspecialchars(json_encode($projects[1]), ENT_QUOTES, 'UTF-8') ?>)">
-                <img src="<?= $projects[1]['cover'] ?>" alt="<?= $projects[1]['desc'] ?>"
-                    loading="lazy"
-                    class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000">
+                <?php if ($projects[1]['type'] === 'video'): ?>
+                    <video src="<?= $projects[1]['cover'] ?>" autoplay muted loop playsinline
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 pointer-events-none"></video>
+                <?php else: ?>
+                    <img src="<?= $projects[1]['cover'] ?>" alt="<?= $projects[1]['desc'] ?>"
+                        loading="lazy"
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000">
+                <?php endif; ?>
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                 </div>
@@ -72,9 +132,14 @@
             <div class="md:col-span-2 md:row-span-1 group relative overflow-hidden rounded-[3rem] bg-brand-surface cursor-pointer"
                 data-animate="card" data-service="<?= $projects[2]['service'] ?>" data-project-id="<?= $projects[2]['id'] ?>"
                         onclick="openProjectModal(<?= htmlspecialchars(json_encode($projects[2]), ENT_QUOTES, 'UTF-8') ?>)">
-                <img src="<?= $projects[2]['cover'] ?>"
-                    alt="<?= $projects[2]['desc'] ?>" loading="lazy"
-                    class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000">
+                <?php if ($projects[2]['type'] === 'video'): ?>
+                    <video src="<?= $projects[2]['cover'] ?>" autoplay muted loop playsinline
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 pointer-events-none"></video>
+                <?php else: ?>
+                    <img src="<?= $projects[2]['cover'] ?>"
+                        alt="<?= $projects[2]['desc'] ?>" loading="lazy"
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000">
+                <?php endif; ?>
                 <div class="absolute bottom-12 left-12">
                     <p class="text-[10px] font-black uppercase tracking-[0.4em] text-brand-red mb-2"><?= $projects[2]['service'] ?></p>
                     <h4 class="text-2xl font-black uppercase tracking-tighter"><?= $projects[2]['title'] ?></h4>
@@ -85,9 +150,14 @@
             <div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-[3rem] bg-brand-surface cursor-pointer shadow-2xl"
                 data-animate="card" data-service="<?= $projects[3]['service'] ?>" data-project-id="<?= $projects[3]['id'] ?>"
                         onclick="openProjectModal(<?= htmlspecialchars(json_encode($projects[3]), ENT_QUOTES, 'UTF-8') ?>)">
-                <img src="<?= $projects[3]['cover'] ?>"
-                    alt="<?= $projects[3]['desc'] ?>" loading="lazy"
-                    class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
+                <?php if ($projects[3]['type'] === 'video'): ?>
+                    <video src="<?= $projects[3]['cover'] ?>" autoplay muted loop playsinline
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 pointer-events-none"></video>
+                <?php else: ?>
+                    <img src="<?= $projects[3]['cover'] ?>"
+                        alt="<?= $projects[3]['desc'] ?>" loading="lazy"
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
+                <?php endif; ?>
                 <div
                     class="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-brand-navy via-brand-navy/50 to-transparent">
                     <p class="text-[10px] font-black uppercase tracking-[0.4em] text-brand-cyan mb-4"><?= $projects[3]['service'] ?></p>

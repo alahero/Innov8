@@ -173,6 +173,20 @@
                         ]
                     ],
                     [
+                        'id'      => 'top-repair',
+                        'title'   => 'TOP REPAIR',
+                        'service' => 'Logo & Branding',
+                        'desc'    => 'A sharp, professional identity for Top Repair — built to command trust and communicate quality at first glance.',
+                        'cover'   => './public/portfolio/logo-branding/top-repair/TopRepair_Cover.webp',
+                        'type'    => 'image',
+                        'content' => [
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_02.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_03.webp', 'type' => 'image', 'size' => 'bento-square'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_04.webp', 'type' => 'image', 'size' => 'bento-square'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_05.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                        ]
+                    ],
+                    [
                         'id' => 'freak-city',
                         'title' => 'FREAK CITY',
                         'service' => 'Editorial Design',
@@ -225,10 +239,23 @@
                         ]
                     ],
                     // === PLACEHOLDER PROJECTS (for other service categories) ===
-                    ['id' => 'p1', 'title' => 'STRIPE CONNECT', 'service' => 'Website', 'desc' => 'B2B dashboard redesign.', 'cover' => 'https://picsum.photos/seed/stripe2/800/800', 'type' => 'image', 'content' => []],
                     ['id' => 'p2', 'title' => 'SNAPCHAT KIT', 'service' => 'Corporate Stationery', 'desc' => 'Full stationery kit.', 'cover' => 'https://picsum.photos/seed/mobile/800/800', 'type' => 'image', 'content' => []],
                     ['id' => 'p3', 'title' => 'NEXUS PROMO', 'service' => 'Promotional Materials', 'desc' => 'Global event campaign.', 'cover' => 'https://picsum.photos/seed/nexus/800/800', 'type' => 'image', 'content' => []],
                     ['id' => 'p4', 'title' => 'VANTARA XP', 'service' => 'Digital Tools', 'desc' => '3D Immersive web experience.', 'cover' => 'https://picsum.photos/seed/nature/800/800', 'type' => 'image', 'content' => []],
+                    // === REAL PROJECTS — Website ===
+                    [
+                        'id'      => 'roofix',
+                        'title'   => 'ROOFIX',
+                        'service' => 'Website',
+                        'desc'    => 'A high-converting roofing website built for dominance — bold design, seamless UX, and lead-generation power baked in.',
+                        'cover'   => './public/portfolio/website/roofix/RooFix_Cover.webp',
+                        'type'    => 'image',
+                        'content' => [
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_02.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_03.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_04.webp', 'type' => 'image', 'size' => 'bento-square'],
+                        ]
+                    ],
                 ];
                 ?>
 
