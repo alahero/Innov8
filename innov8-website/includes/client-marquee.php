@@ -4,13 +4,13 @@
     <div class="marquee-content inline-flex gap-16 md:gap-32 animate-scroll py-4 whitespace-nowrap items-center mb-8">
         <?php
         $testimonials = [
-            ['name' => 'Sarah Jenkins', 'company' => 'Adobe', 'img' => 'https://ui-avatars.com/api/?name=Sarah+Jenkins&background=random', 'quote' => 'Innov8 transformed our brand entirely! The cinematic approach they took elevated our identity to a level we never thought possible.'],
-            ['name' => 'David Chen', 'company' => 'Stripe', 'img' => 'https://ui-avatars.com/api/?name=David+Chen&background=random', 'quote' => 'Their strategic precision and stunning execution gave us the exact push we needed to solidify our market position.'],
-            ['name' => 'Elena Rodriguez', 'company' => 'Figma', 'img' => 'https://ui-avatars.com/api/?name=Elena+Rodriguez&background=random', 'quote' => 'The team at Innov8 does not just design; they craft immersive narratives. We were blown away by the final delivery.'],
-            ['name' => 'Marcus Johnson', 'company' => 'Shopify', 'img' => 'https://ui-avatars.com/api/?name=Marcus+Johnson&background=random', 'quote' => 'A fully integrated creative partner that truly understands how to blend premium aesthetics with highly functional digital tools.'],
-            ['name' => 'Aisha Patel', 'company' => 'Netflix', 'img' => 'https://ui-avatars.com/api/?name=Aisha+Patel&background=random', 'quote' => 'From the initial strategy to the final cinematic execution, every step was handled with surgical precision. Outstanding work.'],
-            ['name' => 'Tom Anderson', 'company' => 'Slack', 'img' => 'https://ui-avatars.com/api/?name=Tom+Anderson&background=random', 'quote' => 'They redefined our corporate stationery and digital presence simultaneously. A truly bold and cohesive ecosystem.'],
-            ['name' => 'Zoe Fisher', 'company' => 'Zendesk', 'img' => 'https://ui-avatars.com/api/?name=Zoe+Fisher&background=random', 'quote' => 'Working with Innov8 was the best investment we made this year. High-end, fluid, and relentlessly focused on results.']
+            ['name' => 'Alejandro Rivera', 'company' => 'IL LEO', 'img' => 'https://ui-avatars.com/api/?name=Alejandro+Rivera&background=random', 'quote' => 'Innov8 transformed our brand entirely! The cinematic approach they took elevated our Mediterranean heritage to a level we never thought possible.'],
+            ['name' => 'Jimena Torres', 'company' => 'LAS TORTILLAS', 'img' => 'https://ui-avatars.com/api/?name=Jimena+Torres&background=random', 'quote' => 'Their strategic precision and stunning execution captured the essence and warmth of our brand perfectly.'],
+            ['name' => 'Eduardo Mendoza', 'company' => 'TOP REPAIR', 'img' => 'https://ui-avatars.com/api/?name=Eduardo+Mendoza&background=random', 'quote' => 'The team at Innov8 does not just design; they craft immersive narratives. We were blown away by the final delivery for Top Repair.'],
+            ['name' => 'Renata Gómez', 'company' => 'MANDALA', 'img' => 'https://ui-avatars.com/api/?name=Renata+Gomez&background=random', 'quote' => 'A fully integrated creative partner that truly understands how to blend premium aesthetics with highly functional digital tools for our teaser campaigns.'],
+            ['name' => 'Santiago Ortiz', 'company' => 'LA SANTA', 'img' => 'https://ui-avatars.com/api/?name=Santiago+Ortiz&background=random', 'quote' => 'From the initial strategy to the final cinematic execution, every step was handled with surgical precision. Outstanding work for our anniversary.'],
+            ['name' => 'Valeria Luna', 'company' => 'ROOFIX', 'img' => 'https://ui-avatars.com/api/?name=Valeria+Luna&background=random', 'quote' => 'They redefined our digital presence with a high-converting website. A truly bold and cohesive ecosystem for RooFix.'],
+            ['name' => 'Mateo Herrera', 'company' => 'ARRA KIA', 'img' => 'https://ui-avatars.com/api/?name=Mateo+Herrera&background=random', 'quote' => 'Working with Innov8 was the best investment we made this year. High-end, fluid, and relentlessly focused on results.']
         ];
 
         // Duplicate for infinite loop effect
@@ -92,7 +92,4 @@
         animation: scroll 40s linear infinite;
     }
 
-    .marquee-content:hover {
-        animation-play-state: paused;
-    }
 </style>

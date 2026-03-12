@@ -139,6 +139,33 @@
                 $projects = [
                     // === REAL PROJECTS ===
                     [
+                        'id'      => 'roofix',
+                        'title'   => 'ROOFIX',
+                        'service' => 'Website',
+                        'desc'    => 'A high-converting roofing website built for dominance — bold design, seamless UX, and lead-generation power baked in.',
+                        'cover'   => './public/portfolio/website/roofix/RooFix_Cover.webp',
+                        'type'    => 'image',
+                        'content' => [
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_02.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_03.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/website/roofix/RooFix_Content_04.webp', 'type' => 'image', 'size' => 'bento-square'],
+                        ]
+                    ],
+                    [
+                        'id'      => 'top-repair',
+                        'title'   => 'TOP REPAIR',
+                        'service' => 'Logo & Branding',
+                        'desc'    => 'A sharp, professional identity for Top Repair — built to command trust and communicate quality at first glance.',
+                        'cover'   => './public/portfolio/logo-branding/top-repair/TopRepair_Cover.webp',
+                        'type'    => 'image',
+                        'content' => [
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_02.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_03.webp', 'type' => 'image', 'size' => 'bento-square'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_04.webp', 'type' => 'image', 'size' => 'bento-square'],
+                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_05.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                        ]
+                    ],
+                    [
                         'id' => 'il-leo',
                         'title' => 'IL LEO',
                         'service' => 'Logo & Branding',
@@ -163,27 +190,13 @@
                         'content' => [
                             ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_02.png', 'type' => 'image', 'size' => 'bento-wide'],
                             ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_03.png', 'type' => 'image', 'size' => 'bento-square'],
-                            ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_04.webp', 'type' => 'image', 'size' => 'bento-portrait'],
+                            ['src' => './public/portfolio/las-tortillas/Las_Tortillas_Content_04.webp', 'type' => 'image', 'size' => 'bento-portrait'],
                             ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_05.png', 'type' => 'image', 'size' => 'bento-portrait'],
                             ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_06.png', 'type' => 'image', 'size' => 'bento-wide'],
                             ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_07.png', 'type' => 'image', 'size' => 'bento-square'],
                             ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_08.png', 'type' => 'image', 'size' => 'bento-square'],
                             ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_09.png', 'type' => 'image', 'size' => 'bento-square'],
                             ['src' => './public/portfolio/logo-branding/las-tortillas/Las_Tortillas_Content_10.png', 'type' => 'image', 'size' => 'bento-wide'],
-                        ]
-                    ],
-                    [
-                        'id'      => 'top-repair',
-                        'title'   => 'TOP REPAIR',
-                        'service' => 'Logo & Branding',
-                        'desc'    => 'A sharp, professional identity for Top Repair — built to command trust and communicate quality at first glance.',
-                        'cover'   => './public/portfolio/logo-branding/top-repair/TopRepair_Cover.webp',
-                        'type'    => 'image',
-                        'content' => [
-                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_02.webp', 'type' => 'image', 'size' => 'bento-wide'],
-                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_03.webp', 'type' => 'image', 'size' => 'bento-square'],
-                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_04.webp', 'type' => 'image', 'size' => 'bento-square'],
-                            ['src' => './public/portfolio/logo-branding/top-repair/TopRepair_Content_05.webp', 'type' => 'image', 'size' => 'bento-wide'],
                         ]
                     ],
                     [
@@ -239,23 +252,9 @@
                         ]
                     ],
                     // === PLACEHOLDER PROJECTS (for other service categories) ===
-                    ['id' => 'p2', 'title' => 'SNAPCHAT KIT', 'service' => 'Corporate Stationery', 'desc' => 'Full stationery kit.', 'cover' => 'https://picsum.photos/seed/mobile/800/800', 'type' => 'image', 'content' => []],
+                    ['id' => 'p2', 'title' => 'ARRA KIA', 'service' => 'Corporate Stationery', 'desc' => 'Full stationery kit.', 'cover' => 'https://picsum.photos/seed/mobile/800/800', 'type' => 'image', 'content' => []],
                     ['id' => 'p3', 'title' => 'NEXUS PROMO', 'service' => 'Promotional Materials', 'desc' => 'Global event campaign.', 'cover' => 'https://picsum.photos/seed/nexus/800/800', 'type' => 'image', 'content' => []],
                     ['id' => 'p4', 'title' => 'VANTARA XP', 'service' => 'Digital Tools', 'desc' => '3D Immersive web experience.', 'cover' => 'https://picsum.photos/seed/nature/800/800', 'type' => 'image', 'content' => []],
-                    // === REAL PROJECTS — Website ===
-                    [
-                        'id'      => 'roofix',
-                        'title'   => 'ROOFIX',
-                        'service' => 'Website',
-                        'desc'    => 'A high-converting roofing website built for dominance — bold design, seamless UX, and lead-generation power baked in.',
-                        'cover'   => './public/portfolio/website/roofix/RooFix_Cover.webp',
-                        'type'    => 'image',
-                        'content' => [
-                            ['src' => './public/portfolio/website/roofix/RooFix_Content_02.webp', 'type' => 'image', 'size' => 'bento-wide'],
-                            ['src' => './public/portfolio/website/roofix/RooFix_Content_03.webp', 'type' => 'image', 'size' => 'bento-wide'],
-                            ['src' => './public/portfolio/website/roofix/RooFix_Content_04.webp', 'type' => 'image', 'size' => 'bento-square'],
-                        ]
-                    ],
                 ];
                 ?>
 

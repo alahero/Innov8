@@ -64,8 +64,11 @@
                 <p class="text-[9px] text-white/20 uppercase tracking-[0.4em] font-black">National Reach. Local
                     Dedication.</p>
             </div>
-            <p class="text-[10px] text-white/20 uppercase tracking-[0.4em] font-black">© <?= date('Y') ?> Innov8
-                Creations, LLC. ALL RIGHTS RESERVED.</p>
+            <div class="flex flex-col items-center">
+                <p class="text-[10px] text-white/20 uppercase tracking-[0.4em] font-black">© <?= date('Y') ?> Innov8
+                    Creations, LLC. ALL RIGHTS RESERVED.</p>
+                <p class="text-[10px] text-white uppercase tracking-[0.4em] font-bold mt-2">A Grupo Salisguri Company</p>
+            </div>
             <div class="flex gap-12">
                 <a href="#"
                     class="text-[10px] text-white/20 hover:text-brand-cyan uppercase tracking-[0.4em] font-black">Privacy</a>

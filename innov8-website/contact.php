@@ -30,24 +30,31 @@ include './includes/head-contact.php'; ?>
                         presence your business deserves.
                     </p>
 
-                    <div class="pt-8 space-y-6 md:space-y-0 md:flex md:gap-12 border-t border-white/10">
-                        <!-- Direct Contact info or other subtle detail -->
-                        <div>
-                            <p class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-cyan mb-2">EMAIL US
-                            </p>
-                            <a href="mailto:hello@innov8creations.com"
-                                class="text-lg font-medium text-white hover:text-brand-cyan transition-colors">
-                                hello@innov8creations.com
-                            </a>
+                    <div class="pt-8 flex flex-col gap-8 border-t border-white/10">
+                        <div class="flex flex-col md:flex-row md:gap-12">
+                            <!-- Direct Contact info -->
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-cyan mb-2">EMAIL US
+                                </p>
+                                <a href="mailto:hello@innov8creations.com"
+                                    class="text-lg font-medium text-white hover:text-brand-cyan transition-colors">
+                                    hello@innov8creations.com
+                                </a>
+                            </div>
+                            <div class="hidden md:block w-px bg-white/10"></div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-red mb-2">CALL US</p>
+                                <a href="tel:+1234567890"
+                                    class="text-lg font-medium text-white hover:text-brand-red transition-colors">
+                                    +1 (234) 567-890
+                                </a>
+                            </div>
                         </div>
-                        <div class="hidden md:block w-px bg-white/10"></div>
-                        <div>
-                            <p class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-red mb-2">CALL US</p>
-                            <a href="tel:+1234567890"
-                                class="text-lg font-medium text-white hover:text-brand-red transition-colors">
-                                +1 (234) 567-890
-                            </a>
-                        </div>
+                        
+                        <!-- Secondary Separator -->
+                        <div class="w-full h-px bg-white/10"></div>
+                        
+                        <p class="text-xs font-bold uppercase tracking-[0.2em] text-white">A Grupo Salisguri Company</p>
                     </div>
                 </div>
 
