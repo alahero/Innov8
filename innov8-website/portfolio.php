@@ -166,6 +166,19 @@
                         ]
                     ],
                     [
+                        'id'      => 'arqtec',
+                        'title'   => 'ARQTEC',
+                        'service' => 'Logo & Branding',
+                        'desc'    => 'A sleek, forward-thinking identity for Arqtec — designed to reflect precision, innovation, and structural expertise while conveying reliability and modern engineering at first glance.',
+                        'cover'   => './public/portfolio/logo-branding/arqtec/Arqtec_Cover.webp',
+                        'type'    => 'image',
+                        'content' => [
+                            ['src' => './public/portfolio/logo-branding/arqtec/Arqtec_Content_03.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/logo-branding/arqtec/Arqtec_Content_01.webp', 'type' => 'image', 'size' => 'bento-square'],
+                            ['src' => './public/portfolio/logo-branding/arqtec/Arqtec_Content_02.webp', 'type' => 'image', 'size' => 'bento-square']
+                        ]
+                    ],
+                    [
                         'id' => 'il-leo',
                         'title' => 'IL LEO',
                         'service' => 'Logo & Branding',
