@@ -38,7 +38,7 @@ include './includes/head-contact.php'; ?>
                                 </p>
                                 <a href="mailto:hello@innov8creations.com"
                                     class="text-lg font-medium text-white hover:text-brand-cyan transition-colors">
-                                    hello@innov8creations.com
+                                    sales@innov8creations.com
                                 </a>
                             </div>
                             <div class="hidden md:block w-px bg-white/10"></div>
@@ -46,7 +46,7 @@ include './includes/head-contact.php'; ?>
                                 <p class="text-[10px] font-black uppercase tracking-[0.3em] text-brand-red mb-2">CALL US</p>
                                 <a href="tel:+1234567890"
                                     class="text-lg font-medium text-white hover:text-brand-red transition-colors">
-                                    +1 (234) 567-890
+                                    +1 (657) 645-9590
                                 </a>
                             </div>
                         </div>
