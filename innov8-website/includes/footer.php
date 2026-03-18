@@ -10,10 +10,10 @@
                 </h2>
                 <div class="flex flex-col gap-6 md:gap-8">
                     <a href="mailto:hello@innov8.creations"
-                        class="text-lg sm:text-xl md:text-3xl lg:text-4xl font-black text-white hover:text-brand-red transition-colors duration-500 uppercase tracking-tighter block break-all">hello@innov8.creations</a>
+                        class="text-lg sm:text-xl md:text-3xl lg:text-4xl font-black text-white hover:text-brand-red transition-colors duration-500 uppercase tracking-tighter block break-all">sales@innov8creations.com</a>
                     <a href="tel:+14157966262"
-                        class="text-xl text-white/40 hover:text-white transition-colors duration-500 uppercase tracking-[0.4em] font-black">+1
-                        (415) 796-6262</a>
+                        class="text-xl text-white/40 hover:text-white transition-colors duration-500 uppercase tracking-[0.4em] font-black">
+                        +1 (657) 645-9590</a>
                 </div>
             </div>
 
@@ -39,10 +39,11 @@
                     <p class="text-[10px] uppercase tracking-[0.5em] text-white/30 font-black">FOLLOW US</p>
                     <?php
                     $socialLinks = [
-                        'Instagram' => 'https://instagram.com/innov8creations',
-                        'Dribbble' => 'https://dribbble.com/innov8creations',
-                        'LinkedIn' => 'https://linkedin.com/company/innov8creations',
-                        'Twitter' => 'https://twitter.com/innov8creations',
+                        'Instagram' => 'https://www.instagram.com/innov8creations?igsh=enk4eTFianE3b202',
+                        // 'Dribbble' => 'https://dribbble.com/innov8creations',
+                        'Facebook' =>  'https://m.facebook.com/profile.php?id=61583735412037&name=xhp_nt__fb__action__open_user',
+                        // 'LinkedIn' => 'https://linkedin.com/company/innov8creations',
+                        // 'Twitter' => 'https://twitter.com/innov8creations',
                     ];
                     foreach ($socialLinks as $label => $href): ?>
                         <a href="<?= $href ?>" target="_blank" rel="noopener noreferrer"

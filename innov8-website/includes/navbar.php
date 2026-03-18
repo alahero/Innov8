@@ -52,11 +52,15 @@ $navItems = [
         </a>
     <?php endforeach; ?>
     <div class="flex gap-6">
-        <a href="https://instagram.com/innov8creations" target="_blank" rel="noopener noreferrer"
+        <a href="https://www.instagram.com/innov8creations?igsh=enk4eTFianE3b202" target="_blank" rel="noopener noreferrer"
             class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
             <i data-lucide="instagram" class="w-8 h-8"></i>
         </a>
-        <a href="https://dribbble.com/innov8creations" target="_blank" rel="noopener noreferrer"
+        <a href="https://m.facebook.com/profile.php?id=61583735412037&name=xhp_nt__fb__action__open_user" target="_blank" rel="noopener noreferrer"
+            class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
+            <i data-lucide="facebook" class="w-8 h-8"></i>
+        </a>
+        <!-- <a href="https://dribbble.com/innov8creations" target="_blank" rel="noopener noreferrer"
             class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
             <i data-lucide="dribbble" class="w-8 h-8"></i>
         </a>
@@ -67,7 +71,7 @@ $navItems = [
         <a href="https://x.com/innov8creations" target="_blank" rel="noopener noreferrer"
             class="mobile-link text-4xl font-black uppercase tracking-tighter text-white hover:text-brand-cyan transition-colors">
             <i data-lucide="twitter" class="w-8 h-8"></i>
-        </a>
+        </a> -->
     </div>
     <button aria-label="Close Mobile Menu" id="close-menu-btn" class="absolute top-8 right-8 text-white p-2">
         <i data-lucide="x" class="w-10 h-10"></i>

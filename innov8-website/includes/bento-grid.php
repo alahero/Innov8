@@ -56,16 +56,16 @@
                         ],
                     ],
                     [
-                        'id' => 'la-santa',
-                        'title' => 'LA SANTA ANIVERSARIO',
-                        'service' => 'Social Media',
-                        'desc' => 'A cinematic anniversary campaign for La Santa — motion-forward storytelling at its finest.',
-                        'cover' => './public/portfolio/social-media/la-santa/La_Santa_Aniversario_Cover.mp4',
-                        'type' => 'video',
+                        'id'      => 'arqtec',
+                        'title'   => 'ARQTEC',
+                        'service' => 'Logo & Branding',
+                        'desc'    => 'A sleek, forward-thinking identity for Arqtec — designed to reflect precision, innovation, and structural expertise while conveying reliability and modern engineering at first glance.',
+                        'cover'   => './public/portfolio/logo-branding/arqtec/Arqtec_Cover.webp',
+                        'type'    => 'image',
                         'content' => [
-                            ['src' => './public/portfolio/social-media/la-santa/La_Santa_Aniversario_Content_02.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
-                            ['src' => './public/portfolio/social-media/la-santa/La_Santa_Aniversario_Content_03.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
-                            ['src' => './public/portfolio/social-media/la-santa/La_Santa_Aniversario_Content_04.mp4', 'type' => 'video', 'size' => 'bento-portrait'],
+                            ['src' => './public/portfolio/logo-branding/arqtec/Arqtec_Content_03.webp', 'type' => 'image', 'size' => 'bento-wide'],
+                            ['src' => './public/portfolio/logo-branding/arqtec/Arqtec_Content_01.webp', 'type' => 'image', 'size' => 'bento-square'],
+                            ['src' => './public/portfolio/logo-branding/arqtec/Arqtec_Content_02.webp', 'type' => 'image', 'size' => 'bento-square']
                         ]
                     ],
                     [
