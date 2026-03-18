@@ -54,7 +54,7 @@ include './includes/head-contact.php'; ?>
                         <!-- Secondary Separator -->
                         <div class="w-full h-px bg-white/10"></div>
                         
-                        <p class="text-xs font-bold uppercase tracking-[0.2em] text-white">A Grupo Salisguri Company</p>
+                        <p class="text-xs font-bold uppercase tracking-[0.2em] text-white">Banco BX+ & Multicomercio Minthues S.A. de C.V.</p>
                     </div>
                 </div>
 

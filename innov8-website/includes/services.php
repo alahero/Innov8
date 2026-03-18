@@ -120,33 +120,41 @@
             $packages = [
                 [
                     'name' => 'Starting To Innov8',
-                    'desc' => 'A foundational package for brands beginning to define or refresh their identity.',
+                    'desc' => 'Ideal for starting with identity and minimum presence.',
                     'features' => [
                         'Logo',
                         'Business Cards (500 pieces)',
+                        'Letterhead',
                         'Google Business Profile'
                     ],
                     'accent' => 'text-white'
                 ],
                 [
                     'name' => 'Innov8 & Growth',
-                    'desc' => 'Designed for businesses ready to scale their brand and strengthen market presence.',
+                    'desc' => 'For entrepreneurs who want to take the next digital step.',
                     'features' => [
-                        'Starting To Innov8 Included',
-                        'Web + Hosting (1 Year)',
-                        'Email Signature'
+                        'Logo',
+                        'Business Cards (500 pieces)',
+                        'Letterhead',
+                        'Website with 1 year of hosting included',
+                        'Email Signature',
+                        'Google Business Profile (editable digital version)'
                     ],
                     'accent' => 'text-brand-cyan'
                 ],
                 [
                     'name' => 'Innov8 Pro',
-                    'desc' => 'A comprehensive solution for brands seeking a fully integrated creative partner.',
+                    'desc' => 'Everything needed to start strong in branding + digital + social media.',
                     'features' => [
-                        'Innov8 & Growth Included',
-                        'Letterhead Pack (250 pieces)',
-                        'Digital Invoice Design',
-                        'Social Media Premium Creative Pack',
-                        'QR Code'
+                        'Logo',
+                        'Business Cards (500 pieces)',
+                        'Letterhead',
+                        'Website with 1 year of hosting included',
+                        'Google Business Profile',
+                        'Email Signature',
+                        'QR Code',
+                        'Premium Creative Pack for social media content',
+                        'Digital Invoice Design'
                     ],
                     'accent' => 'text-brand-red'
                 ]

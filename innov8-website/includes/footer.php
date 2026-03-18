@@ -67,8 +67,8 @@
             </div>
             <div class="flex flex-col items-center">
                 <p class="text-[10px] text-white/20 uppercase tracking-[0.4em] font-black">© <?= date('Y') ?> Innov8
-                    Creations, LLC. ALL RIGHTS RESERVED.</p>
-                <p class="text-[10px] text-white uppercase tracking-[0.4em] font-bold mt-2">A Grupo Salisguri Company</p>
+                    Creations. ALL RIGHTS RESERVED.</p>
+                <p class="text-[10px] text-white uppercase tracking-[0.4em] font-bold mt-2">Banco BX+ & Multicomercio Minthues S.A. de C.V.</p>
             </div>
             <div class="flex gap-12">
                 <a href="#"
