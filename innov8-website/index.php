@@ -53,16 +53,16 @@
       "url": "https://innov8creations.com",
       "logo": "https://innov8creations.com/public/assets/svg/favicon.svg",
       "image": "https://innov8creations.com/public/assets/og-image.png",
-      "email": "hello@innov8creations.com",
-      "telephone": "+1-234-567-890",
+      "email": "sales@innov8creations.com",
+      "telephone": "+1 (657) 645-9590",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Mexico City",
         "addressCountry": "MX"
       },
       "sameAs": [
-        "https://instagram.com/innov8creations",
-        "https://linkedin.com/company/innov8creations"
+        "https://www.instagram.com/innov8creations?igsh=enk4eTFianE3b202",
+        "https://m.facebook.com/profile.php?id=61583735412037&name=xhp_nt__fb__action__open_user"
       ],
       "serviceType": [
         "Logo & Branding",
